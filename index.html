@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Cleanup</title>
+</head>
+<body>
+    <h1>Data Cleanup</h1>
+    <form action="/merge" method="post" enctype="multipart/form-data">
+        <input type="file" name="file1" accept=".xlsx"><br><br>
+        <input type="file" name="file2" accept=".xlsx"><br><br>
+        Merge on:<br>
+        <select name="left_on">
+            <option value="ID">Id</option>
+            <option value="Name">Name</option>
+        </select>
+        <select name="right_on">
+            <option value="ID">ID</option>
+            <option value="Name">Name</option>
+        </select><br><br>
+        Merge type:
+        <select name="how">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="outer">Outer</option>
+            <option value="inner">Inner</option>
+            <option value="cross">Cross</option>
+        </select><br><br>
+        <input type="submit" value="Merge">
+    </form>
+</body>
+</html>
